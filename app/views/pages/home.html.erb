@@ -1,0 +1,17 @@
+<h1>The spoon</h1>
+<h3>Find the best restaurants in Tel Aviv</h3>
+
+<form action="/restaurants" method="get">
+  <input type="text" name="food_type" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+<br>
+
+<p>Create a new restaurant</p>
+<form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="address" placeholder="Address">
+  <input type="submit">
+</form>

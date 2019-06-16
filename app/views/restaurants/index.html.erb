@@ -1,0 +1,7 @@
+<h1>Here are all restaurants in Tel Aviv</h1>
+
+<ul>
+  <% @restaurants.each do |id, restaurant| %>
+  <li> <%= link_to restaurant[:name], restaurant_path(id) %></li>
+  <% end %>
+</ul>
